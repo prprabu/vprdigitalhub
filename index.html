@@ -1,329 +1,746 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VPR Digital Hub | Tamil Nadu e-Sevai & CSC Services</title>
+<title>VPR Digital Hub | பொது சேவை மையம் — Tiruppur CSC e-Sevai Center</title>
+<meta name="description" content="VPR Digital Hub — Government approved CSC e-Sevai center in Tiruppur, Tamil Nadu. Aadhaar, PAN, Passport, Certificates, ITR filing, Xerox & Printing, and all online government services.">
 
-<meta name="description" content="Tamil Nadu e-Sevai, CSC Services, PAN Card, Passport Assistance, Xerox, Printing and Online Government Services.">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Noto+Serif+Tamil:wght@600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --paper:#F2EAD6;
+  --paper-deep:#EBE0C4;
+  --card:#FBF7EC;
+  --ink:#1B2C4F;
+  --ink-dark:#101B33;
+  --seal:#A6342A;
+  --seal-dark:#832721;
+  --brass:#B9862E;
+  --charcoal:#28241F;
+  --green:#3B6B4C;
+  --line:#D9CBA3;
+  --tam:'Noto Serif Tamil',serif;
+  --tam-sans:'Noto Sans Tamil',sans-serif;
+  --eng:'Fraunces',serif;
+  --body:'Inter',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
-font-family:Inter,sans-serif;
-scroll-behavior:smooth;
-background:#f8f9fa;
+  margin:0;
+  background:var(--paper);
+  color:var(--charcoal);
+  font-family:var(--body);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(180,160,110,.10) 0px, rgba(180,160,110,.10) 1px, transparent 1px, transparent 34px);
 }
-h1,h2,h3,h4,h5{
-font-family:Poppins,sans-serif;
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+.container{max-width:1140px;margin:0 auto;padding:0 22px;}
+.tam{font-family:var(--tam-sans);}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--seal);
+  font-weight:600;
 }
-.navbar{
-background:#0d6efd;
+.eyebrow.light{color:var(--brass);}
+
+/* ===== NAV ===== */
+header{
+  position:sticky;top:0;z-index:500;
+  background:var(--ink);
+  border-bottom:3px double var(--brass);
 }
-.navbar-brand,.nav-link{
-color:#fff!important;
-font-weight:600;
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 22px;max-width:1140px;margin:0 auto;
 }
+.brandmark{display:flex;align-items:center;gap:10px;color:#fff;}
+.brandmark .badge{
+  width:40px;height:40px;border-radius:50%;
+  border:2px solid var(--brass);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-weight:700;color:var(--brass);font-size:.75rem;
+}
+.brandmark .name{font-family:var(--eng);font-size:1.35rem;font-weight:700;letter-spacing:.02em;line-height:1;}
+.brandmark .name small{display:block;font-family:var(--tam-sans);font-size:.62rem;font-weight:500;color:var(--brass);letter-spacing:.04em;margin-top:2px;}
+nav.links{display:flex;gap:26px;align-items:center;}
+nav.links a{color:#EDE5CC;font-size:.85rem;font-weight:600;font-family:var(--tam-sans);}
+nav.links a:hover{color:var(--brass);}
+.nav-call{
+  background:var(--seal);color:#fff;padding:9px 16px;border-radius:3px;
+  font-family:var(--mono);font-weight:600;font-size:.82rem;display:flex;gap:8px;align-items:center;
+}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;}
+
+/* ===== HERO ===== */
 .hero{
-background:linear-gradient(rgba(13,110,253,.85),rgba(25,135,84,.85)),
-url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-color:white;
-padding:120px 0;
+  background:radial-gradient(circle at 18% 20%, #23386417, transparent 45%), var(--ink);
+  background-color:var(--ink);
+  color:#F2EAD6;
+  padding:70px 0 60px;
+  position:relative;overflow:hidden;
+  border-bottom:3px double var(--brass);
 }
-.hero h1{
-font-size:3rem;
-font-weight:800;
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;}
+.hero-brand{margin:14px 0 6px;line-height:.95;}
+.hero-brand .eng{font-family:var(--eng);font-weight:800;font-size:3.1rem;color:#fff;letter-spacing:.01em;}
+.hero-brand .tam{font-family:var(--tam);font-weight:800;font-size:2.2rem;color:var(--brass);display:block;margin-top:6px;}
+.hero p.lede{font-family:var(--tam-sans);font-size:1.02rem;line-height:1.75;color:#DCD3B7;max-width:52ch;margin:16px 0 10px;}
+.hero p.lede-en{font-size:.92rem;line-height:1.7;color:#B9AF93;max-width:52ch;margin:0 0 26px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 22px;border-radius:3px;font-weight:700;font-size:.92rem;
+  font-family:var(--tam-sans);border:2px solid transparent;transition:.2s;
 }
-.section-title{
-text-align:center;
-margin-bottom:40px;
-font-weight:700;
+.btn-seal{background:var(--seal);color:#fff;}
+.btn-seal:hover{background:var(--seal-dark);}
+.btn-outline{border-color:var(--brass);color:var(--brass);}
+.btn-outline:hover{background:var(--brass);color:var(--ink-dark);}
+.btn-green{background:var(--green);color:#fff;}
+
+/* stamp */
+.stamp-wrap{display:flex;justify-content:center;position:relative;}
+.stamp{width:270px;height:270px;transform:rotate(-9deg);filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));}
+.owner-tag{
+  margin-top:-18px;margin-left:auto;margin-right:auto;width:max-content;
+  background:var(--card);border:1px dashed var(--brass);border-radius:3px;
+  padding:8px 16px;font-family:var(--mono);font-size:.72rem;color:var(--ink);text-align:center;
+  position:relative;left:0;right:0;
 }
-.service-card,.why-card,.price-card{
-background:#fff;
-border-radius:18px;
-padding:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-height:100%;
+
+/* ===== TRUST BAR ===== */
+.trustbar{background:var(--brass);padding:13px 0;}
+.trustbar .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;}
+.trustbar span{
+  font-family:var(--mono);font-size:.76rem;font-weight:600;color:var(--ink-dark);
+  display:flex;align-items:center;gap:7px;
 }
-.service-card:hover,.why-card:hover{
-transform:translateY(-8px);
+
+/* ===== SECTION GENERIC ===== */
+section{padding:70px 0;}
+.section-head{max-width:640px;margin:0 auto 42px;text-align:center;}
+.section-head h2{
+  font-family:var(--tam);font-size:2.1rem;color:var(--ink);margin:8px 0 6px;font-weight:800;
 }
+.section-head .sub-en{font-family:var(--eng);font-size:1.05rem;color:var(--seal);font-weight:600;font-style:italic;}
+.section-head p{font-family:var(--tam-sans);color:#5a5346;margin-top:12px;font-size:.95rem;line-height:1.7;}
+.rule{
+  width:70px;height:3px;background:var(--seal);margin:16px auto 0;
+}
+
+/* ===== ABOUT ===== */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.about-copy h3{font-family:var(--tam);color:var(--ink);font-size:1.5rem;margin-bottom:12px;}
+.about-copy p{font-family:var(--tam-sans);line-height:1.85;color:#3d382f;margin-bottom:14px;}
+.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;}
+.fact{
+  background:var(--card);border:1px solid var(--line);border-left:4px solid var(--seal);
+  padding:14px 16px;border-radius:2px;
+}
+.fact .num{font-family:var(--mono);font-weight:700;color:var(--seal);font-size:1.3rem;display:block;}
+.fact .lbl{font-family:var(--tam-sans);font-size:.78rem;color:#5a5346;}
+.about-card{
+  background:var(--ink);color:#EDE5CC;border-radius:4px;padding:34px;
+  border:2px solid var(--brass);position:relative;
+}
+.about-card::before{
+  content:"";position:absolute;inset:8px;border:1px dashed rgba(185,134,46,.5);border-radius:2px;pointer-events:none;
+}
+.about-card h4{font-family:var(--mono);color:var(--brass);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+.about-card ul{margin:0;padding:0;list-style:none;}
+.about-card li{
+  font-family:var(--tam-sans);padding:10px 0;border-bottom:1px dashed rgba(237,229,204,.25);
+  display:flex;justify-content:space-between;font-size:.9rem;
+}
+.about-card li:last-child{border-bottom:none;}
+.about-card li b{font-family:var(--mono);color:#fff;}
+
+/* ===== COUNTERS / SERVICES ===== */
+.counters{background:var(--paper-deep);}
+.counter-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.counter-card{
+  background:var(--card);border:1px solid var(--line);border-radius:3px;padding:26px 26px 18px;
+  position:relative;
+}
+.counter-tag{
+  position:absolute;top:-16px;left:22px;
+  background:var(--seal);color:#fff;font-family:var(--mono);font-weight:700;font-size:.72rem;
+  padding:6px 12px;border-radius:2px;letter-spacing:.05em;
+  box-shadow:0 3px 0 rgba(0,0,0,.15);
+}
+.counter-card h3{font-family:var(--tam);color:var(--ink);font-size:1.15rem;margin:14px 0 3px;}
+.counter-card .en{font-family:var(--eng);font-style:italic;color:#8a7f63;font-size:.85rem;margin-bottom:14px;display:block;}
+.svc-list{list-style:none;margin:0;padding:0;display:grid;gap:9px;}
+.svc-list li{display:flex;align-items:center;gap:10px;font-family:var(--tam-sans);font-size:.87rem;color:#3d382f;}
+.svc-list li i{color:var(--seal);width:18px;text-align:center;font-size:.85rem;}
+
+/* ===== ITR BANNER ===== */
+.itr{
+  background:var(--seal);color:#fff;position:relative;overflow:hidden;
+}
+.itr::after{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg, rgba(255,255,255,.04) 0 2px, transparent 2px 26px);
+}
+.itr .container{position:relative;}
+.itr-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:34px;}
+.itr-top h2{font-family:var(--tam);font-size:2rem;margin:6px 0;}
+.itr-top .en{font-family:var(--eng);font-style:italic;font-size:1.1rem;color:#F6D9CE;}
+.deadline-chip{
+  font-family:var(--mono);background:var(--ink-dark);border:1px dashed var(--brass);
+  color:var(--brass);padding:12px 18px;border-radius:3px;font-size:.85rem;font-weight:600;text-align:center;
+}
+.itr-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:34px;}
+.itr-col{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:3px;padding:22px;}
+.itr-col h4{font-family:var(--tam);font-size:1.1rem;margin-bottom:12px;display:flex;gap:8px;align-items:center;}
+.itr-col ul{margin:0;padding:0;list-style:none;display:grid;gap:9px;}
+.itr-col li{font-family:var(--tam-sans);font-size:.86rem;display:flex;gap:9px;}
+.itr-col li i{margin-top:3px;color:var(--brass);}
+.docs-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px;}
+.doc-chip{
+  background:#fff;color:var(--ink);border-radius:3px;padding:10px 16px;
+  font-family:var(--tam-sans);font-size:.82rem;font-weight:600;display:flex;gap:8px;align-items:center;
+}
+.doc-chip i{color:var(--seal);}
+.itr-call{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;
+  background:var(--ink-dark);border-radius:4px;padding:22px 28px;border:2px solid var(--brass);
+}
+.itr-call .nums{display:flex;gap:22px;flex-wrap:wrap;}
+.itr-call .nums a{font-family:var(--mono);font-size:1.3rem;font-weight:700;color:#fff;display:flex;gap:10px;align-items:center;}
+.itr-call .nums a i{color:var(--brass);}
+
+/* ===== PROCESS ===== */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.step{position:relative;padding:26px 20px;background:var(--card);border:1px solid var(--line);border-radius:3px;}
+.step .step-no{
+  font-family:var(--mono);font-weight:700;font-size:.75rem;color:var(--seal);
+  border:1px solid var(--seal);border-radius:50%;width:30px;height:30px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.step h4{font-family:var(--tam);color:var(--ink);font-size:1.02rem;margin:0 0 6px;}
+.step p{font-family:var(--tam-sans);font-size:.82rem;color:#5a5346;margin:0;line-height:1.6;}
+.step:not(:last-child)::after{
+  content:"→";position:absolute;right:-24px;top:26px;color:var(--brass);font-size:1.1rem;
+}
+
+/* ===== PRICING ===== */
+.pricing{background:var(--paper-deep);}
 .price-table{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+  background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden;
 }
-.gallery img{
-border-radius:15px;
-width:100%;
-height:220px;
-object-fit:cover;
+.price-table table{width:100%;border-collapse:collapse;}
+.price-table thead{background:var(--ink);color:#fff;}
+.price-table th{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:14px 20px;text-align:left;font-weight:600;
 }
-footer{
-background:#212529;
-color:white;
-padding:25px 0;
+.price-table td{
+  font-family:var(--tam-sans);padding:13px 20px;border-bottom:1px dashed var(--line);font-size:.9rem;color:#3d382f;
 }
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-background:#25d366;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-font-size:30px;
-text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-z-index:999;
+.price-table td.amt{font-family:var(--mono);font-weight:600;color:var(--seal);text-align:right;}
+.price-table tr:last-child td{border-bottom:none;}
+.price-note{font-family:var(--tam-sans);text-align:center;margin-top:16px;font-size:.82rem;color:#5a5346;}
+
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;}
+.info-card{
+  background:var(--ink);color:#EDE5CC;border-radius:4px;padding:32px;border:2px solid var(--brass);
 }
+.info-card h3{font-family:var(--tam);font-size:1.3rem;margin-bottom:18px;}
+.info-row{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start;}
+.info-row i{color:var(--brass);width:20px;margin-top:3px;}
+.info-row div{font-family:var(--tam-sans);font-size:.88rem;line-height:1.6;}
+.info-row .placeholder{color:#C9BE9E;font-style:italic;}
+form.enquiry{
+  background:var(--card);border:1px solid var(--line);border-radius:4px;padding:32px;
+}
+.form-row{margin-bottom:16px;}
+.form-row label{display:block;font-family:var(--tam-sans);font-size:.8rem;color:var(--ink);margin-bottom:6px;font-weight:600;}
+.form-row input,.form-row select,.form-row textarea{
+  width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:3px;
+  font-family:var(--body);font-size:.9rem;background:#fff;color:var(--charcoal);
+}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:2px solid var(--seal);outline-offset:1px;}
+.submit-btn{
+  width:100%;background:var(--seal);color:#fff;border:none;padding:14px;border-radius:3px;
+  font-family:var(--tam-sans);font-weight:700;font-size:.95rem;cursor:pointer;
+}
+.submit-btn:hover{background:var(--seal-dark);}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink-dark);color:#B9AF93;padding:44px 0 22px;border-top:3px double var(--brass);}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:30px;}
+.foot-grid h5{font-family:var(--tam);color:#fff;font-size:1.1rem;margin-bottom:12px;}
+.foot-grid p{font-family:var(--tam-sans);font-size:.83rem;line-height:1.7;}
+.foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;}
+.foot-grid a{font-family:var(--tam-sans);font-size:.83rem;color:#B9AF93;}
+.foot-grid a:hover{color:var(--brass);}
+.foot-bottom{
+  border-top:1px solid rgba(185,175,147,.2);padding-top:18px;text-align:center;
+  font-family:var(--mono);font-size:.72rem;color:#8a8168;
+}
+
+/* floating buttons */
+.floaters{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:600;}
+.fab{
+  width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.4rem;box-shadow:0 8px 18px rgba(0,0,0,.3);
+}
+.fab.wa{background:#25d366;}
+.fab.call{background:var(--seal);}
+
+/* responsive */
+@media(max-width:900px){
+  nav.links{display:none;}
+  .hamburger{display:block;}
+  .hero-grid{grid-template-columns:1fr;}
+  .stamp-wrap{order:-1;}
+  .about-wrap{grid-template-columns:1fr;}
+  .counter-grid{grid-template-columns:1fr;}
+  .itr-cols{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .step:not(:last-child)::after{display:none;}
+  .contact-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hero-brand .eng{font-size:2.3rem;}
+  .hero-brand .tam{font-size:1.7rem;}
+}
+@media(max-width:560px){
+  .about-facts{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:1fr;}
+  .trustbar .container{justify-content:flex-start;}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
 </style>
 </head>
-
 <body>
 
-<nav class="navbar navbar-expand-lg sticky-top">
-<div class="container">
-<a class="navbar-brand" href="#">VPR Digital Hub</a>
+<header>
+  <div class="nav-inner">
+    <a class="brandmark" href="#top">
+      <span class="badge">CSC</span>
+      <span class="name">VPR Digital Hub<small>பொது சேவை மையம் · e-Sevai Center</small></span>
+    </a>
+    <nav class="links">
+      <a href="#about">எங்களை பற்றி</a>
+      <a href="#counters">சேவைகள்</a>
+      <a href="#itr">ITR தாக்கல்</a>
+      <a href="#pricing">கட்டணம்</a>
+      <a href="#contact">தொடர்பு</a>
+    </nav>
+    <a class="nav-call" href="tel:+919659155196"><i class="fa-solid fa-phone"></i> 96591 55196</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
 
-<button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow light"><i class="fa-solid fa-shield-halved"></i> அரசு அங்கீகரிக்கப்பட்ட CSC மையம் · Govt. Approved CSC Center</span>
+      <div class="hero-brand">
+        <span class="eng">VPR DIGITAL HUB</span>
+        <span class="tam">உங்கள் அனைத்து அரசு சேவைகளும் ஒரே இடத்தில்</span>
+      </div>
+      <p class="lede">ஆதார், பான் கார்டு, பாஸ்போர்ட், சான்றிதழ்கள், வாக்காளர் அட்டை முதல் ITR தாக்கல், Xerox &amp; பிரிண்டிங் வரை — அனைத்து அரசு மற்றும் டிஜிட்டல் சேவைகளையும் விரைவாக, பாதுகாப்பாக, சரியான கட்டணத்தில் பெறுங்கள்.</p>
+      <p class="lede-en">Your government-approved one-stop counter for Aadhaar, PAN, Passport, certificates, ITR filing, exam applications, and all Xerox &amp; printing needs — fast, transparent, and trusted.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-seal" href="tel:+919659155196"><i class="fa-solid fa-phone"></i> இப்போது அழைக்கவும் · Call Now</a>
+        <a class="btn btn-green" href="https://wa.me/919659155196?text=Hi" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp சேவை</a>
+        <a class="btn btn-outline" href="#counters">சேவைகள் பார்க்க</a>
+      </div>
+    </div>
 
-<div class="collapse navbar-collapse" id="menu">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-<li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul>
-</div>
-</div>
-</nav>
-
-<section class="hero text-center">
-<div class="container">
-<h1>VPR Digital Hub</h1>
-<h3>Tamil Nadu e-Sevai | CSC Services | Xerox Center</h3>
-<p class="lead mt-3">
-Your trusted destination for online government services,
-PAN Card, Passport Assistance, Printing, Scanning and Digital Documentation.
-</p>
-
-<a href="#services" class="btn btn-warning btn-lg m-2">View Services</a>
-<a href="#contact" class="btn btn-light btn-lg m-2">Contact Us</a>
-</div>
+    <div>
+      <div class="stamp-wrap">
+        <svg class="stamp" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circleTop" d="M 20,110 A 90,90 0 1,1 200,110" fill="none"/>
+            <path id="circleBottom" d="M 200,110 A 90,90 0 1,1 20,110" fill="none"/>
+          </defs>
+          <circle cx="110" cy="110" r="98" fill="none" stroke="#A6342A" stroke-width="2"/>
+          <circle cx="110" cy="110" r="86" fill="none" stroke="#A6342A" stroke-width="2" stroke-dasharray="3 4"/>
+          <text font-family="IBM Plex Mono" font-size="11.5" font-weight="700" fill="#A6342A" letter-spacing="2">
+            <textPath href="#circleTop" startOffset="50%" text-anchor="middle">GOVT APPROVED · CSC CENTER</textPath>
+          </text>
+          <text font-family="IBM Plex Mono" font-size="11.5" font-weight="700" fill="#A6342A" letter-spacing="2">
+            <textPath href="#circleBottom" startOffset="50%" text-anchor="middle">DIGITAL INDIA · TIRUPPUR</textPath>
+          </text>
+          <circle cx="110" cy="110" r="58" fill="none" stroke="#A6342A" stroke-width="1.5"/>
+          <text x="110" y="103" text-anchor="middle" font-family="IBM Plex Mono" font-weight="700" font-size="22" fill="#A6342A">100%</text>
+          <text x="110" y="126" text-anchor="middle" font-family="IBM Plex Mono" font-weight="700" font-size="12" fill="#A6342A" letter-spacing="1.5">VERIFIED</text>
+        </svg>
+      </div>
+      <div class="owner-tag">உரிமை / Proprietor: <b>ராஜலட்சுமி · Rajalakshmi</b></div>
+    </div>
+  </div>
 </section>
 
-<section class="py-5" id="about">
-<div class="container">
-<h2 class="section-title">About Us</h2>
-
-<div class="row align-items-center">
-<div class="col-lg-6">
-<h3>Welcome to VPR Digital Hub</h3>
-<p>
-We provide reliable digital services including Tamil Nadu e-Sevai,
-CSC services, PAN Card applications, Passport assistance,
-online registrations, printing, scanning and Xerox services.
-</p>
-
-<div class="row">
-<div class="col-6">✅ Transparent Pricing</div>
-<div class="col-6">✅ Fast Processing</div>
-<div class="col-6">✅ Secure Handling</div>
-<div class="col-6">✅ Friendly Support</div>
+<div class="trustbar">
+  <div class="container">
+    <span><i class="fa-solid fa-shield"></i> 100% பாதுகாப்பான · Trusted</span>
+    <span><i class="fa-solid fa-bolt"></i> விரைவு சேவை · Fast Service</span>
+    <span><i class="fa-solid fa-indian-rupee-sign"></i> நியாயமான கட்டணம் · Affordable</span>
+    <span><i class="fa-solid fa-headset"></i> முழு ஆதரவு · Expert Support</span>
+  </div>
 </div>
 
-</div>
-
-<div class="col-lg-6">
-<img class="img-fluid rounded-4 shadow"
-src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80">
-</div>
-
-</div>
-</div>
+<section id="about">
+  <div class="container about-wrap">
+    <div class="about-copy">
+      <span class="eyebrow">எங்களை பற்றி · About Us</span>
+      <h3>VPR Digital Hub-க்கு வரவேற்கிறோம்</h3>
+      <p>VPR டிஜிட்டல் ஹப், தமிழ்நாடு அரசு e-Sevai மற்றும் Common Service Center (CSC) அங்கீகாரம் பெற்ற மையமாகும். ஆதார், பான் கார்டு, வாக்காளர் அட்டை, பாஸ்போர்ட், சான்றிதழ்கள் முதல் காப்பீடு, வங்கி சேவைகள், தேர்வு விண்ணப்பங்கள் வரை — அனைத்து அரசு தொடர்பான டிஜிட்டல் பணிகளும் இங்கே எளிதாக, வேகமாக, சரியாக செய்யப்படுகிறது.</p>
+      <p>Xerox, கலர் பிரிண்டிங், ஸ்கேனிங், லேமினேஷன் மற்றும் ஆன்லைன் படிவம் நிரப்புதல் உள்ளிட்ட அனைத்து அச்சு சேவைகளும் ஒரே கூரையின் கீழ் கிடைக்கிறது.</p>
+      <div class="about-facts">
+        <div class="fact"><span class="num">25+</span><span class="lbl">சேவை வகைகள் · Service categories</span></div>
+        <div class="fact"><span class="num">6</span><span class="lbl">நாட்கள்/வாரம் · Days open a week</span></div>
+        <div class="fact"><span class="num">100%</span><span class="lbl">பாதுகாப்பான தாக்கல் · Secure filing</span></div>
+        <div class="fact"><span class="num">CSC</span><span class="lbl">அரசு அங்கீகாரம் · Govt approved</span></div>
+      </div>
+    </div>
+    <div class="about-card">
+      <h4>Center Details</h4>
+      <ul>
+        <li>மையம் பெயர் <b>VPR Digital Hub</b></li>
+        <li>வகை <b>CSC · e-Sevai</b></li>
+        <li>உரிமையாளர் <b>Rajalakshmi</b></li>
+        <li>இயக்க நேரம் <b>திங்கள்–சனி, 9AM–8PM</b></li>
+        <li>தொடர்பு <b>96591 55196</b></li>
+        <li>ITR உதவி <b>80124 47406</b></li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section class="py-5 bg-light" id="services">
-<div class="container">
-<h2 class="section-title">Our Services</h2>
+<section class="counters" id="counters">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">கவுண்டர்கள் · Service Counters</span>
+      <h2>உங்கள் சேவைகள்... எங்கள் வாக்குறுதி!</h2>
+      <span class="sub-en">Every counter, every certificate, under one roof</span>
+      <div class="rule"></div>
+    </div>
 
-<div class="row g-4">
+    <div class="counter-grid">
 
-<div class="col-md-4">
-<div class="service-card">
-<h4><i class="fa-solid fa-landmark"></i> e-Sevai</h4>
-<ul>
-<li>Income Certificate</li>
-<li>Community Certificate</li>
-<li>Nativity Certificate</li>
-<li>Legal Heir Certificate</li>
-<li>Birth Certificate</li>
-<li>Death Certificate</li>
-<li>Patta Chitta</li>
-<li>EC Download</li>
-</ul>
-</div>
-</div>
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 01</span>
+        <h3>அடையாள சேவைகள்</h3><span class="en">Identity &amp; Registration</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-fingerprint"></i> ஆதார் புதுப்பிப்பு / பிரிண்ட் · Aadhaar update &amp; print</li>
+          <li><i class="fa-solid fa-id-card"></i> பான் கார்டு விண்ணப்பம் · PAN Card (5-day service)</li>
+          <li><i class="fa-solid fa-check-to-slot"></i> வாக்காளர் அட்டை · Voter ID new / correction</li>
+          <li><i class="fa-solid fa-book"></i> குடும்ப அட்டை · Ration Card services</li>
+        </ul>
+      </div>
 
-<div class="col-md-4">
-<div class="service-card">
-<h4><i class="fa-solid fa-id-card"></i> CSC Services</h4>
-<ul>
-<li>PAN Card</li>
-<li>Insurance</li>
-<li>PM Kisan</li>
-<li>Banking Services</li>
-<li>Bill Payments</li>
-<li>Mobile Recharge</li>
-<li>FASTag</li>
-<li>Pension Services</li>
-</ul>
-</div>
-</div>
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 02</span>
+        <h3>சான்றிதழ் சேவைகள்</h3><span class="en">Certificates</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-baby"></i> பிறப்பு / இறப்பு சான்று · Birth / Death Certificate</li>
+          <li><i class="fa-solid fa-people-group"></i> வருமான / சமூக சான்று · Income / Community Certificate</li>
+          <li><i class="fa-solid fa-map-location-dot"></i> பட்டா / சிட்டா / EC · Patta / Chitta / EC</li>
+          <li><i class="fa-solid fa-file-signature"></i> Legal Heir &amp; Nativity Certificate</li>
+        </ul>
+      </div>
 
-<div class="col-md-4">
-<div class="service-card">
-<h4><i class="fa-solid fa-print"></i> Xerox & Print</h4>
-<ul>
-<li>Black & White Xerox</li>
-<li>Color Printing</li>
-<li>Scanning</li>
-<li>Lamination</li>
-<li>Spiral Binding</li>
-<li>Passport Photo</li>
-<li>Document Editing</li>
-<li>Online Applications</li>
-</ul>
-</div>
-</div>
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 03</span>
+        <h3>பயணம் &amp; பாஸ்போர்ட்</h3><span class="en">Passport &amp; Travel</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-passport"></i> பாஸ்போர்ட் புதிய / Tatkal · New / Re-apply / Tatkal</li>
+          <li><i class="fa-solid fa-ticket"></i> ரயில் / பேருந்து / விமான டிக்கெட் · Bus, Train, Flight tickets</li>
+          <li><i class="fa-solid fa-car"></i> ஓட்டுநர் உரிமம் · Driving License new / renewal</li>
+        </ul>
+      </div>
 
-</div>
-</div>
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 04</span>
+        <h3>வரி &amp; பில் சேவைகள்</h3><span class="en">Tax &amp; Bill Payments</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-file-invoice-dollar"></i> ITR தாக்கல் · Income Tax Return filing</li>
+          <li><i class="fa-solid fa-bolt"></i> EB பில் / சொத்து வரி · EB Bill / Property Tax</li>
+          <li><i class="fa-solid fa-receipt"></i> GST பதிவு &amp; ரிட்டர்ன் · GST Registration &amp; Return</li>
+        </ul>
+      </div>
+
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 05</span>
+        <h3>வணிக பதிவு</h3><span class="en">Business Registration</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-utensils"></i> FSSAI உரிமம் · FSSAI License new / renewal</li>
+          <li><i class="fa-solid fa-industry"></i> MSME / உத்யம் பதிவு · MSME / Udyam Registration</li>
+          <li><i class="fa-solid fa-briefcase"></i> வேலைவாய்ப்பு பதிவு · Employment Registration</li>
+        </ul>
+      </div>
+
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 06</span>
+        <h3>காப்பீடு &amp; வங்கி</h3><span class="en">Insurance &amp; Banking</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-umbrella"></i> வாழ்க்கை / வாகன காப்பீடு · Life, Health &amp; Vehicle Insurance</li>
+          <li><i class="fa-solid fa-seedling"></i> PM Kisan &amp; திட்ட விண்ணப்பம் · Govt Scheme applications</li>
+          <li><i class="fa-solid fa-hand-holding-heart"></i> ஓய்வூதிய சான்று · Pension / Jeevan Pramaan</li>
+          <li><i class="fa-solid fa-building-columns"></i> வங்கி சேவைகள் · Banking correspondent services</li>
+        </ul>
+      </div>
+
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 07</span>
+        <h3>கல்வி &amp; தேர்வு</h3><span class="en">Education &amp; Exams</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-landmark"></i> TNPSC / TRB / TET விண்ணப்பம் · Exam applications</li>
+          <li><i class="fa-solid fa-graduation-cap"></i> கல்வி உதவித்தொகை · Scholarship apply &amp; status</li>
+          <li><i class="fa-solid fa-file-pen"></i> தேர்வு புகைப்படம் + ஆன்லைன் படிவம் · Exam photo &amp; form filling</li>
+        </ul>
+      </div>
+
+      <div class="counter-card">
+        <span class="counter-tag">COUNTER 08</span>
+        <h3>பிரிண்ட் &amp; டிஜிட்டல்</h3><span class="en">Print &amp; Digital Services</span>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-print"></i> B/W &amp; கலர் Xerox, பிரிண்ட் · Xerox, Colour Print, Scan</li>
+          <li><i class="fa-solid fa-layer-group"></i> லேமினேஷன் / பைண்டிங் · Lamination &amp; Spiral Binding</li>
+          <li><i class="fa-solid fa-camera"></i> பாஸ்போர்ட் புகைப்படம் · Passport / Stamp Photo</li>
+          <li><i class="fa-solid fa-laptop"></i> லேப்டாப் விற்பனை &amp; சர்வீஸ் · Laptop &amp; Desktop sales/service</li>
+          <li><i class="fa-solid fa-mobile-screen"></i> மொபைல் / DTH ரீசார்ஜ் · Mobile &amp; DTH Recharge</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section class="py-5" id="pricing">
-<div class="container">
-<h2 class="section-title">Transparent Pricing</h2>
+<section class="itr" id="itr">
+  <div class="container">
+    <div class="itr-top">
+      <div>
+        <span class="eyebrow light" style="color:#F6D9CE;"><i class="fa-solid fa-triangle-exclamation"></i> நடப்பு ஆண்டு · Current Year Filing Open</span>
+        <h2>இன்று உங்கள் ITR தாக்கல் செய்யுங்கள்!</h2>
+        <span class="en">File your Income Tax Return today — avoid penalty</span>
+      </div>
+      <div class="deadline-chip">தாக்கல் செய்ய கடைசி தேதி<br><span style="color:#fff;font-size:1.1rem;">31 ஜூலை</span></div>
+    </div>
 
-<div class="price-table">
-<table class="table table-striped table-hover m-0">
-<thead class="table-primary">
-<tr>
-<th>Service</th>
-<th>Price</th>
-</tr>
-</thead>
+    <div class="itr-cols">
+      <div class="itr-col">
+        <h4><i class="fa-solid fa-landmark"></i> அரசு ஊழியர்களுக்கு · Govt. Employees</h4>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Form 16 இருந்தாலே போதும் · Just Form 16 needed</li>
+          <li><i class="fa-solid fa-check"></i> HRA, LTA, மருத்துவ காப்பீடு கழிவுகள்</li>
+          <li><i class="fa-solid fa-check"></i> குழந்தைகள் கல்விக்கட்டணம் கழிவு</li>
+          <li><i class="fa-solid fa-check"></i> 80C, 80D, NPS மற்றும் பிற கழிவுகள்</li>
+        </ul>
+      </div>
+      <div class="itr-col">
+        <h4><i class="fa-solid fa-building"></i> தனியார் ஊழியர்களுக்கு · Private Employees</h4>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> PF, Gratuity, Bonus, HRA கழிவுகள்</li>
+          <li><i class="fa-solid fa-check"></i> Home Loan வட்டி கழிவு · Section 24(b)</li>
+          <li><i class="fa-solid fa-check"></i> குழந்தைகள் கல்விக்கட்டணம் கழிவு</li>
+          <li><i class="fa-solid fa-check"></i> சட்டப்படி 100% சரியான தாக்கல்</li>
+        </ul>
+      </div>
+    </div>
 
-<tbody>
-<tr><td>B/W Xerox</td><td>₹2</td></tr>
-<tr><td>Color Print</td><td>₹10</td></tr>
-<tr><td>Scanning</td><td>₹20</td></tr>
-<tr><td>Lamination</td><td>₹30</td></tr>
-<tr><td>PAN Card Apply</td><td>₹150 + Govt Fee</td></tr>
-<tr><td>Passport Apply</td><td>₹250 + Govt Fee</td></tr>
-<tr><td>Income Certificate</td><td>₹100</td></tr>
-<tr><td>Community Certificate</td><td>₹100</td></tr>
-<tr><td>Patta Chitta</td><td>₹80</td></tr>
-</tbody>
+    <div class="docs-row">
+      <span class="doc-chip"><i class="fa-solid fa-id-card"></i> PAN கார்டு</span>
+      <span class="doc-chip"><i class="fa-solid fa-fingerprint"></i> ஆதார் கார்டு</span>
+      <span class="doc-chip"><i class="fa-solid fa-file-invoice"></i> Form 16</span>
+      <span class="doc-chip"><i class="fa-solid fa-building-columns"></i> வங்கி விவரங்கள்</span>
+    </div>
 
-</table>
-</div>
-
-<p class="text-center mt-3"><b>* Government charges are additional wherever applicable.</b></p>
-
-</div>
+    <div class="itr-call">
+      <div class="nums">
+        <a href="tel:+919659155196"><i class="fa-solid fa-phone"></i> 96591 55196</a>
+        <a href="tel:+918012447406"><i class="fa-solid fa-phone"></i> 80124 47406</a>
+      </div>
+      <a class="btn btn-outline" href="https://wa.me/919659155196?text=ITR%20filing%20enquiry" target="_blank" style="border-color:#fff;color:#fff;">WhatsApp-ல் கேளுங்கள் <i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
 </section>
 
-<section class="py-5 bg-light" id="gallery">
-<div class="container">
-<h2 class="section-title">Gallery</h2>
-
-<div class="row g-3 gallery">
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"></div>
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"></div>
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=800&q=80"></div>
-</div>
-
-</div>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">செயல்முறை · How It Works</span>
+      <h2>4 எளிய படிகள்</h2>
+      <span class="sub-en">From counter visit to certificate in hand</span>
+      <div class="rule"></div>
+    </div>
+    <div class="process-grid">
+      <div class="step">
+        <span class="step-no">01</span>
+        <h4>வாருங்கள் / அழையுங்கள்</h4>
+        <p>மையத்திற்கு நேரடியாக வாருங்கள் அல்லது WhatsApp / அழைப்பு மூலம் தொடர்பு கொள்ளுங்கள்.</p>
+      </div>
+      <div class="step">
+        <span class="step-no">02</span>
+        <h4>ஆவணங்கள் தாருங்கள்</h4>
+        <p>தேவையான ஆவணங்களை சமர்ப்பியுங்கள் — நாங்கள் சரிபார்த்து வழிகாட்டுவோம்.</p>
+      </div>
+      <div class="step">
+        <span class="step-no">03</span>
+        <h4>ஆன்லைன் செயலாக்கம்</h4>
+        <p>உங்கள் விண்ணப்பம் அரசு போர்ட்டலில் பாதுகாப்பாக தாக்கல் செய்யப்படும்.</p>
+      </div>
+      <div class="step">
+        <span class="step-no">04</span>
+        <h4>சான்று / சேவை பெறுங்கள்</h4>
+        <p>உங்கள் சான்றிதழ் அல்லது சேவை நிலையை SMS / WhatsApp மூலம் அறிவிப்போம்.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="py-5" id="contact">
-<div class="container">
-<h2 class="section-title">Contact Us</h2>
-
-<div class="row">
-
-<div class="col-lg-6">
-<h4>VPR Digital Hub</h4>
-<p><i class="fa-solid fa-location-dot"></i> Your Shop Address Here</p>
-<p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
-<p><i class="fa-solid fa-envelope"></i> info@vprdigitalhub.in</p>
-<p><i class="fa-solid fa-clock"></i> Monday - Saturday : 9 AM - 8 PM</p>
-</div>
-
-<div class="col-lg-6">
-<form onsubmit="event.preventDefault();window.open('https://wa.me/91XXXXXXXXXX','_blank');">
-<div class="mb-3">
-<input class="form-control" placeholder="Full Name" required>
-</div>
-
-<div class="mb-3">
-<input class="form-control" placeholder="Mobile Number" required>
-</div>
-
-<div class="mb-3">
-<select class="form-select">
-<option>Select Service</option>
-<option>PAN Card</option>
-<option>Passport</option>
-<option>e-Sevai</option>
-<option>CSC Service</option>
-<option>Xerox</option>
-</select>
-</div>
-
-<div class="mb-3">
-<textarea class="form-control" rows="4" placeholder="Message"></textarea>
-</div>
-
-<button class="btn btn-primary w-100">Send Enquiry</button>
-
-</form>
-</div>
-
-</div>
-</div>
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">கட்டண விவரம் · Transparent Pricing</span>
+      <h2>வெளிப்படையான கட்டணம்</h2>
+      <span class="sub-en">No hidden charges — what you see is what you pay</span>
+      <div class="rule"></div>
+    </div>
+    <div class="price-table">
+      <table>
+        <thead>
+          <tr><th>சேவை · Service</th><th style="text-align:right;">கட்டணம் · Price</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>B/W Xerox</td><td class="amt">₹2 / page</td></tr>
+          <tr><td>கலர் பிரிண்ட் · Colour Print</td><td class="amt">₹10 / page</td></tr>
+          <tr><td>ஸ்கேனிங் · Scanning</td><td class="amt">₹20</td></tr>
+          <tr><td>லேமினேஷன் · Lamination</td><td class="amt">₹30</td></tr>
+          <tr><td>பான் கார்டு விண்ணப்பம் · PAN Card Apply</td><td class="amt">₹150 + அரசு கட்டணம்</td></tr>
+          <tr><td>பாஸ்போர்ட் விண்ணப்பம் · Passport Apply</td><td class="amt">₹250 + அரசு கட்டணம்</td></tr>
+          <tr><td>வருமான சான்று · Income Certificate</td><td class="amt">₹100</td></tr>
+          <tr><td>சமூக சான்று · Community Certificate</td><td class="amt">₹100</td></tr>
+          <tr><td>பட்டா சிட்டா · Patta Chitta</td><td class="amt">₹80</td></tr>
+          <tr><td>ITR தாக்கல் · ITR Filing</td><td class="amt">அழைத்து கேளுங்கள் · Call for quote</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">* அரசு கட்டணங்கள் தேவைப்படும் இடங்களில் கூடுதலாக இருக்கும் · Government charges are additional wherever applicable.</p>
+  </div>
 </section>
 
-<footer class="text-center">
-<div class="container">
-<h5>VPR Digital Hub</h5>
-<p>Tamil Nadu e-Sevai | CSC Services | Xerox Center</p>
-<p>© 2026 All Rights Reserved.</p>
-</div>
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">தொடர்பு · Contact Us</span>
+      <h2>எங்களுடன் தொடர்பு கொள்ளுங்கள்</h2>
+      <span class="sub-en">Visit the counter or send an enquiry</span>
+      <div class="rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card">
+        <h3>VPR Digital Hub</h3>
+        <div class="info-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="placeholder">[உங்கள் முழு கடை முகவரி இங்கே — தெரு, ஏரியா, திருப்பூர், தமிழ்நாடு, PIN குறியீடு]<br>Add your full shop address — street, area, Tiruppur, Tamil Nadu, PIN code</div>
+        </div>
+        <div class="info-row"><i class="fa-solid fa-phone"></i><div>96591 55196</div></div>
+        <div class="info-row"><i class="fa-solid fa-phone"></i><div>80124 47406 (ITR)</div></div>
+        <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div>96591 55196 — "Hi" என்று அனுப்புங்கள்</div></div>
+        <div class="info-row"><i class="fa-solid fa-envelope"></i><div class="placeholder">info@vprdigitalhub.in</div></div>
+        <div class="info-row"><i class="fa-solid fa-clock"></i><div>திங்கள் – சனி · 9 AM – 8 PM</div></div>
+      </div>
+
+      <form class="enquiry" onsubmit="event.preventDefault();window.open('https://wa.me/919659155196?text='+encodeURIComponent('Enquiry from website: '+document.getElementById('efname').value+' — '+document.getElementById('eservice').value),'_blank');">
+        <div class="form-row">
+          <label for="efname">முழு பெயர் · Full Name</label>
+          <input id="efname" type="text" placeholder="உங்கள் பெயர்" required>
+        </div>
+        <div class="form-row">
+          <label for="efphone">மொபைல் நம்பர் · Mobile Number</label>
+          <input id="efphone" type="tel" placeholder="10-இலக்க எண்" required>
+        </div>
+        <div class="form-row">
+          <label for="eservice">சேவை தேர்வு · Select Service</label>
+          <select id="eservice">
+            <option>ஆதார் / PAN / வாக்காளர் அட்டை</option>
+            <option>பாஸ்போர்ட் · Passport</option>
+            <option>சான்றிதழ்கள் · Certificates</option>
+            <option>ITR தாக்கல் · ITR Filing</option>
+            <option>GST / MSME / FSSAI</option>
+            <option>காப்பீடு / வங்கி · Insurance / Banking</option>
+            <option>Xerox / பிரிண்ட்</option>
+            <option>பிற · Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="emsg">செய்தி · Message</label>
+          <textarea id="emsg" rows="4" placeholder="உங்கள் தேவையை விவரிக்கவும்"></textarea>
+        </div>
+        <button class="submit-btn" type="submit"><i class="fa-brands fa-whatsapp"></i> WhatsApp வழியாக அனுப்புங்கள்</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h5>VPR Digital Hub</h5>
+        <p>தமிழ்நாடு அரசு அங்கீகரிக்கப்பட்ட CSC e-Sevai மையம். ஆதார், பான், பாஸ்போர்ட், சான்றிதழ்கள், ITR தாக்கல் மற்றும் அனைத்து Xerox &amp; பிரிண்டிங் சேவைகளும் ஒரே இடத்தில்.</p>
+      </div>
+      <div>
+        <h5>விரைவு இணைப்புகள் · Quick Links</h5>
+        <ul>
+          <li><a href="#about">எங்களை பற்றி</a></li>
+          <li><a href="#counters">சேவைகள்</a></li>
+          <li><a href="#itr">ITR தாக்கல்</a></li>
+          <li><a href="#pricing">கட்டணம்</a></li>
+          <li><a href="#contact">தொடர்பு</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>தொடர்பு · Contact</h5>
+        <ul>
+          <li><a href="tel:+919659155196">96591 55196</a></li>
+          <li><a href="tel:+918012447406">80124 47406</a></li>
+          <li><a href="https://wa.me/919659155196" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 VPR DIGITAL HUB · ESSENTIALS FOR EVERY SPACE · ALL RIGHTS RESERVED</div>
+  </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">
-<i class="fab fa-whatsapp"></i>
-</a>
+<div class="floaters">
+  <a class="fab wa" href="https://wa.me/919659155196?text=Hi" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a class="fab call" href="tel:+919659155196" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('hamburgerBtn').addEventListener('click', function(){
+  var links = document.querySelector('nav.links');
+  var open = links.style.display === 'flex';
+  links.style.display = open ? 'none' : 'flex';
+  links.style.flexDirection = 'column';
+  links.style.position = 'absolute';
+  links.style.top = '64px';
+  links.style.right = '20px';
+  links.style.background = '#1B2C4F';
+  links.style.padding = '18px 24px';
+  links.style.borderRadius = '4px';
+  links.style.border = '1px solid #B9862E';
+  links.style.gap = '16px';
+});
+</script>
 
 </body>
 </html>
